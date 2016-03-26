@@ -1,0 +1,141 @@
+@import "normalize.min.css"
+@import "foundation.min.css"
+@import "nib"
+
+$green = #70ab29
+$mauve = #94517b
+$dark-green = #005e20
+
+body
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  color: #6d6d6d;
+  
+h1
+h2
+h3
+h4
+h5
+h6
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  color: inherit;
+  
+h1
+  font-size: 3rem;
+  
+h2
+  font-size: 1.75rem;
+  
+h3
+  font-size: 1.25rem;
+  
+.section
+  padding: 120px 0 80px;
+
+
+.hero
+  min-height: 100vh;
+  color: white;
+  background: url('img/hero-image.jpg'), $mauve;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding-top: 25%; 
+  
+.hero-info
+  text-align: center;
+  max-width: 530px;
+  margin-right: auto;
+  margin-left: auto;
+  
+  & p
+    opacity: 0.85;
+  
+.button
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  border: 2px solid white;
+  border-radius: 60px;
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 20px;
+  margin-top: 2rem;
+  
+  &:hover
+    background-color: white;
+    color: $mauve;
+    
+.about 
+  & h2
+    color: $green;
+  
+  & p
+    max-width: 350px;
+    
+  & img
+    max-width: 360px;
+    float: right;
+    margin: -40px 20px 0 0;
+    
+.testimonials
+  background-color: #EBECED;
+  padding: 40px;
+  overflow: auto;
+  
+  & .userpic
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    overflow: hidden;
+    float: left;
+    margin-right: 50px;
+    
+  & .quote 
+    padding-left: 170px;
+
+    & p
+      margin-bottom: 0.25rem;
+    
+    & footer
+      text-align: right;
+      padding-right: 50px;
+    
+    & .ratings
+      max-width: 100px;
+      
+.features
+  background-color: $green;
+  color: white;
+  text-align: center;
+  
+  & .description
+    max-width: 530px;
+    margin-right: auto;
+    margin-left: auto;
+  
+  & .stats .icon
+    background-image: url('img/stats-icon.png');
+  
+  & .home .icon
+    background-image: url('img/house-icon.png');
+    
+  & .love .icon
+    background-image: url('img/heart-icon.png');
+  
+  & .icon
+    background-color: $dark-green;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70px 60px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3.5rem;
+    
+  & h3
+    margin-top: 2rem;
+  
+    
