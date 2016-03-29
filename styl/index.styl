@@ -5,6 +5,7 @@
 $green = #70ab29
 $mauve = #94517b
 $dark-green = #005e20
+$white = #ffffff
 
 body
   font-size: 18px;
@@ -106,6 +107,10 @@ h3
       
 .features
   background-color: $green;
+  background: -webkit-linear-gradient(#9ACD32, #006400); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#9ACD32  , #006400); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#9ACD32  , #006400); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#9ACD32  , #006400 ); /* Standard syntax (must be last) */
   color: white;
   text-align: center;
   
@@ -137,5 +142,64 @@ h3
     
   & h3
     margin-top: 2rem;
-  
+
+.gallery
+  background-color: $white;
+  text-align: center;
+
+  & .description
+    max-width: 530px;
+    padding-bottom: 5em;
+
+    margin-right: auto;
+    margin-left: auto;
+
+  & img
+    max-width: 360px;
+    float: right;
+    margin: -40px 20px 0 0;
+
+.benefits
+  background: -webkit-linear-gradient(#99527e,#cd6c99); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#99527e,#cd6c99); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#99527e,#cd6c99); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#99527e,#cd6c99); 
+  text-align: center;
+  color: white;
+
+  & .description
+    max-width: 530px;
+    padding-bottom: 5em;
+    margin-right: auto;
+    margin-left: auto;
+
+  & .button-circle
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    border: 2px solid white;
+    border-radius: 90px;
+    background-color: transparent;
+    box-shadow: none;
+    font-size: 20px;
+    margin-top: 2rem;
+
+    &:hover
+     background-color: white;
+     color: $mauve;
+
+.footer
+  background-color: black;
+  color: white;
+
+  & .section-footer
+    padding: 120px 0 80px;
+
+  & .description
+    font-size: 10px;    
+
+  & .title
+    font-size: 15px;
+
+
+
     
