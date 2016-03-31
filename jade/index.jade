@@ -1,88 +1,127 @@
 doctype 5
-html(lang="en")
+html(lang="pl")
   head
+    meta(charset="utf-8")
     title Washing machine
     link(href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,300|Lato:300', rel='stylesheet', type='text/css')
+    link(rel="stylesheet", type='text/css', href="font-awesome.min.css")
     link(rel="stylesheet", href="index.css")
+    script(src="vendor/modernizr.js")
     script(src="app.js")
+    
+    script(src="vendor/jquery.js")
+    script(src="vendor/fastclick.js")
+    script(src="vendor/smooth-scroll.js")
+    script(src="vendor/foundation.min.js")
+    
     //- script(type='text/javascript')
     //-   if (foo) {
     //-      bar()
     //-   }
+    
+    script
+      $(document).foundation();
+
+    script
+      smoothScroll.init({
+        speed: 800,
+        easing: 'easeInOutCubic',
+        updateURL: false
+      });
+    script
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-11235106-8', 'auto');
+      ga('send', 'pageview');
+ 
+  
   body
+   section#fullpage
     div.hero
       div.hero-info
-        h1 We can improve your life
-        p Thanks to our newest invention our start up is one of the most popular in Western Europe.
-        a.button Tell me more
+        h1 MobiWashMash
+        p Uwolnij pralkę - uwolnij siebie
+        a.button(data-scroll, href="#information-page") Powiedz mi więcej
+   section#information-page
     div.about.row.section
-      div.large-6.columns
-        img(src="img/circles-machine.png")
-      div.large-6.columns
-        h2 One thousand years ago
-        p My bologna has a first name, it's O-s-c-a-r. My bologna has a second name, it's M-e-y-e-r. Oh, I love to eat it every day, and if you ask me why, I'll say: 'cuz Oscar Meyer has a way with b-o-l-o-g-n-a. How's that?
+      div.small-12.medium-12.large-6.columns
+        div.circle-1
+          img(src="img/circle1.jpg")
+        div.circle-2
+          img(src="img/circle2.jpg")
+      div.small-12.medium-12.large-6.columns
+        h2 Poczuj czym jest prawdziwa wolność i mobilność! 
+        p Od początku istnienia SoftwareMill skupiamy się na działaniu z poszanowaniem wolności i mobilności. Od dziś i Ty możesz w prosty sposób wpleść je do codziennego życia. Dzięki unikalnym funkcjom Twoja pralka zyska nowe obszary do eksploatacji, a ty uwolnisz się od rutyny.
     div.testimonials
       img(src='img/user-1.png').userpic
       div.quote
-        p It doesn't matter what comes, fresh goes better in life, with Mentos fresh and full of Life!
-        p Nothing gets to you, stayin' fresh, stayin' cool, with Mentos fresh and full of life! Fresh goes better!
+        p Odkąd korzystam z “MobiWashMash” moje życie stało się prostsze.
+        p  W końcu wyzwoliłam moje pranie. Mogę je robić wszędzie!
         footer
-          &mdash; Marta
+          p ~ Veronica, Poland
         div.ratings
           img(src="img/rating45.png")
     div.features.section
       div.row
-        h2 What you are about to see is real
+        h2 Uwolnij pralkę - uwolnij siebie!
         p.description Come and knock on our door. We've been waiting for you. Where the kisses are hers and hers and his, three's company, too! Come and dance on our floor. Take a step that is new.
         div.large-4.columns.feature.stats
           div.icon
-          h3 Statistics
-          p They are genuine citizens who, having filed their claims in a real small claims court.
+          h3 MobiWashMash dba o Twój komfort!
+          p Ciężka, żeliwna przeciwwaga została zastąpiona lekkimi i pojemnymi bateriami. Zabierz swoją pralkę ze sobą: na biwak za miasto, nad morze, na imprezę. Długie godziny pracy zapewnia stacja dokująca i automatyczny update firmware. MobiWashMash jest zawsze była gotowa na kolejną niesamowitą eskapadę!
         div.large-4.columns.feature.home
           div.icon
-          h3 Home
-          p You're my one and only tiger, with my one and only taste how to take a breakfast.
+          h3 MobiWashMashwszędzie tam, gdzie Ty!
+          p Wbudowany żyroskop oraz opatentowany mechanizm wyważania zawartości bębna sprawia, że  pralka automatycznie dobiera prędkość wirowania do twardości podłoża. Od dziś wiruj wszędzie: w lesie, na plaży, w górach. MobiWashMash to doskonały kompan wycieczek. 
         div.large-4.columns.feature.love
           div.icon
-          h3 Love
-          p We finally got a piece of the pie. Fish don't fry in the kitchen, beans don't burn.
+          h3 MobiWashMash pomoże w każdej sytuacji!
+          p Dzięki modułowi GPS oraz mobilnej aplikacji Airwnw (Air Wash n’ Wear już wkrótce w Google Play oraz App Store) plama po sosie z burrito na twojej koszuli już nigdy nie zniszczy twojej delegacji. Wszystkie pralki w najbliższym sąsiedztwie są do Twojej dyspozycji!
     div.gallery.section
       div.row
-        h2 Gallery
-        p.description We want to present ....
-        div.large-4.medium-4-small-12.columns
-          img(src="img/wash1.jpg")
-        div.large-4.medium-4-small-12.columns
-          img(src="img/wash2.jpg")
-        div.large-4.medium-4-small-12.columns
-          img(src="img/wash3.jpg")
+        h2 Bądź indywidualny
+        p.description Wybierz kolor, który najlepiej opisuje Ciebie
+        div.small-12.medium-12.medium-centered.large-4.columns
+          img(src="img/pink.png")
+          p.text PINK LOVE
+        div.small-12.medium-12.medium-centered.large-4.columns
+          img(src="img/blue.png")
+          p.text BLUE SKY
+        div.small-12.medium-12.medium-centered.large-4.columns
+          img(src="img/green.png")
+          p.text NATURAL GREEN
      div.benefits.section
       div.row
-        h2 Benefits
-        p.description We want to present .... 
-        div.large-12.medium-12-small-12.columns
-         a.button Tell me more
-         p.title We want to present ....
-        div.large-12.medium-12-small-12.columns
-         a.button Tell me more
-         p.title We want to present ....
-        div.large-12.medium-12-small-12.columns
-         a.button Tell me more
-         p.title We want to present ....
-   div.footer.section
+        h2 Korzyści
+        p.description-header Podsmumowując największe zalety MobiWashMash
       div.row
-        div.large-4.medium-4-small-12.columns
-         p.title We want to present ....
-         p.description We want to present ....
-         p.description We want to present ....
-         p.description We want to present ....
-        div.large-4.medium-4-small-12.columns
-         p.title We want to present ....
-         p.description We want to present ....
-         p.description We want to present ....
-         p.description We want to present ....
-        div.large-4.medium-4-small-12.columns
-         p.title We want to present ....
-         p.description We want to present ....
-         p.description We want to present ....
-         p.description We want to present ....
+        div.large-4.medium-4.small-4.columns
+         a.button 
+          i.fa.fa-lightbulb-o
+        div.large-8.medium-8.small-8.columns.title-container
+         p.title Korzystamy z najwowszych dostępnych technologii
+      div.row
+        div.large-4.medium-4.small-4.columns
+         a.button 
+          i.fa.fa-money
+        div.large-8.medium-8.small-8.columns
+         p.title Dzięki MobiWashMash zaoszczędzisz swój czas i pieniądze
+      div.row
+        div.large-4.medium-4.small-4.columns
+         a.button
+          i.fa.fa-tablet
+        div.large-8.medium-8.small-8.columns
+         p.title Będziesz mieć mnóstwo satysfakcji i radości z produktu
+   div.footer.section-footer
+      div.row
+        div.large-6.medium-6.small-6.columns
+         p.title Ciesz się razem z nami produktem
+         p.description Zaufało nam już ponad 1000 osób.
+         p.description Pozwój nam ulepszyć swoje życie
+        div.large-6.medium-6.small-6.columns
+         p.title Jakość i komfort
+         p.description Nasze produkty wykonane są z największą starannością.
+         p.description Oprogramowanie tworzone jest przez najlepszych programistów.
+         p.description Wygląd starannie dobrany z myślą o nowoczesnych wnętrzach
