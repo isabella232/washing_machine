@@ -23,16 +23,23 @@ h6
   color: inherit;
   
 h1
-  font-size: 3rem;
+  font-size: 4rem;
   
 h2
-  font-size: 1.75rem;
+  font-size: 1.9rem;
   
 h3
-  font-size: 1.25rem;
+  font-size: 1.4rem;
+
+h5
+  font-size: 2rem;
+  
+h6 
+  font-size: 2rem;
   
 .section
   padding: 120px 0 80px;
+
 
 .hero
   min-height: 100vh;
@@ -41,7 +48,11 @@ h3
   background-size: cover;
   background-position: center;
   position: relative;
-  padding-top: 25%;
+  padding-top: 15%;
+
+ @media only screen and (max-width: 49em)
+  .hero
+   padding-top: 15%;
  
 .hero-info
   text-align: center;
@@ -51,7 +62,20 @@ h3
   
   & p
     opacity: 0.85;
-  
+
+  & .logo
+     position: absolute;
+     top: 25px;
+     left: 120px;
+     font-size: 1.2 em;
+      
+  & img
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    max-width:60px;
+    max-height:60px;
+    
 .button
   font-family: 'Lato', sans-serif;
   text-transform: uppercase;
@@ -69,6 +93,7 @@ h3
 .about 
   & h2
     color: $green;
+    max-width: 450px;
   
   & p
     max-width: 350px;
@@ -123,7 +148,7 @@ h3
     overflow: hidden;
     float: left;
     margin-right: 50px;
-    box-shadow: 5px 10px 10px #EFEFEF;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.23);
     
   & .quote 
     padding-left: 170px;
@@ -137,7 +162,7 @@ h3
     
     & .ratings
       max-width: 100px;
-      
+     
 .features
   background-color: $green;
   background: -webkit-linear-gradient(#65992d, #90cf40); /* For Safari 5.1 to 6.0 */
@@ -153,13 +178,13 @@ h3
     margin-left: auto;
   
   & .stats .icon
-    background-image: url('img/stats-icon.png');
+    background-image: url('img/bulb-icon.png');
   
   & .home .icon
-    background-image: url('img/house-icon.png');
+    background-image: url('img/cloud-icon.png');
     
   & .love .icon
-    background-image: url('img/heart-icon.png');
+    background-image: url('img/pointer-icon.png');
   
   & .icon
     background-color: $dark-green;
@@ -172,10 +197,12 @@ h3
     margin-right: auto;
     margin-left: auto;
     margin-top: 3.5rem;
-    box-shadow: 5px 10px 10px #46974B;
+    margin-bottom 3.5 em;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.34);
     
   & h3
     margin-top: 2rem;
+    font-weight: bold;
 
 .gallery
   background-color: #F6F6F6;
@@ -190,16 +217,19 @@ h3
     padding-bottom: 5em;
     margin-right: auto;
     margin-left: auto;
+    
 
   & img
-    max-width: 300px;
+    width: 300px;
+    max-width:100%;
     border-radius: 45px;
-    box-shadow: 10px 10px 10px #B5B4B4;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.23);
 
 
   & .text
      text-align: center;
      margin-top: 10px;
+     font-size: 1.3em;
      
 
 .benefits
@@ -209,20 +239,19 @@ h3
   background: linear-gradient(#99527e,#cd6c99); 
   text-align: center;
   color: white;
-
+  padding-top:none;
+  
+  
   & .title
-    line-height: 8em;
     text-align: left;
-    font-size: 15px;
-
-  & .title-container
-    height: 8em;
+    font-size: 18px;
+    padding-top: 2em;
 
   & .description-header
     max-width: 530px;
-    padding-bottom: 2em;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 5em;
     text-align: center;
 
   & .button
@@ -235,24 +264,31 @@ h3
     height: 4em;
     width: 4em;
     padding: 1.5em 0 1.5em 0;
-    margin: 0;
+    margin-top: 1.5em;
 
     &:hover
      background-color: white;
      color: $mauve;
 
 .footer
-  background-color: black;
+  background-color: #000828;
   color: white;
-
-  & .description
-    font-size: 10px;  
-    text-align:center; 
-
-  & .title
-    font-size: 15px;
   
+  & a 
+    font-size: 18px; 
+    font-weight: bold;
+    text-align center;   
+    
+  & .description
+    font-size: 13px;  
+    text-align:center; 
+   
+  & .title
+    font-size: 18px;
     text-align:center;  
+  
+  & p
+    font-size: 18px; 
 
 .section-footer
   padding: 50px 0 80px;
